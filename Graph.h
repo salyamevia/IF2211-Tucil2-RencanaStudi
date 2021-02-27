@@ -60,7 +60,10 @@ class Graph {
         vector<Vertex> getVertex();
 
         void addEdge(Vertex source, Vertex destination);
+        void removeEdge(Vertex source, Vertex destination);
+        void removeVertex(Vertex vertex);
         Vertex findVertex(int id);
+        int countInDegree(Vertex vertex);
         void printGraph();
         void printVertex();
     private:

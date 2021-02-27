@@ -27,7 +27,7 @@ Graph filesToGraph(string filename) {
     while(getline(file, line)) {
         // Remove dots and space
         line.erase(remove(line.begin(), line.end(), '.'), line.end());
-        line.erase(remove(line.begin(), line.end(), ' '), line.end());
+        line = removeSpace(line);
 
         // Seperate by commas
         vector<string> vertrices;
@@ -74,7 +74,7 @@ vector<Vertex> filesToVertex(string filename) {
     while(getline(file, line)) {
         // Remove dots and space
         line.erase(remove(line.begin(), line.end(), '.'), line.end());
-        line.erase(remove(line.begin(), line.end(), ' '), line.end());
+        line = removeSpace(line);
 
         // Seperate by commas
         vector<string> vertrices;
@@ -108,6 +108,9 @@ vector<Vertex> filesToVertex(string filename) {
     return result;
 }
 
+/*  
+    Additional Helper Functions
+*/
 int countFileLine(string filename) {
     ifstream file(filename); 
 
@@ -119,4 +122,22 @@ int countFileLine(string filename) {
     file.close();
 
     return lineCount;
+}
+
+bool isCommaSpaceDot(char c) {
+   return c == ' ' || c == ',' || c == '.';
+}
+
+string removeSpace(string str) {
+    string result = ""; char last = ' ';
+    for (unsigned int i = 0; i < str.length(); i++) {
+        if (str[i] != ' ' ||
+            (!isCommaSpaceDot(last) &&
+            i < str.length()-1 && !isCommaSpaceDot(str[i+1])))
+        {
+            result += str[i];
+            last = str[i];
+        }
+    }
+    return result;
 }

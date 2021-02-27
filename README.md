@@ -1,4 +1,4 @@
-# <The Program Name>
+# Renacain : Program Pemilihan Rencana Kuliah
 > Tugas Kecil 2 IF2211 Strategi Algoritma | 13519083 Shaffira Alya Mevia
 
 ## Getting Started
@@ -8,9 +8,8 @@
 ## Development Notes
 Program to-do list:
 - [x] Graph Class
-- [ ] Convert input to graph (adjacency list)
-- [ ] DFS Algorithm
-- [ ] Toposort Algorithm
+- [x] Convert input to graph (adjacency list)
+- [ ] Topological Sort Algorithm
 
 ## Acknowledgement
 
