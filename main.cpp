@@ -1,21 +1,22 @@
 #include<iostream>
-#include "Graph.cpp"
+#include<vector>
+#include<string>
+#include<sstream>
+
+#include "Graph.cpp" // Graph Class
+#include "filesProcessing.cpp" // filesToGraph
 using namespace std;
 
 int main(int argc, const char** argv) {
     cout << "Welcome :D" << endl;
+    cout << "Enter filename: ";
+    string filename; cin >> filename;
+    cout << "File name is " << filename << endl;
 
-    Vertex a; a.content = "A"; a.id = 0;
-    Vertex b; b.content = "B"; b.id = 1;
-    Vertex c; c.content = "C"; c.id = 2;
+    Graph myGraph = filesToGraph(filename);
 
-    Graph test(3);
-    test.addEdge(a, b);
-    test.addEdge(a, c);
-    test.addEdge(b, c);
-
-    test.printGraph();
-    test.printVertex();
+    myGraph.printGraph();
+    myGraph.printVertex();  
 
     return 0;
 }

@@ -6,9 +6,8 @@
 using namespace std;
 
 /*
-    < Graph Class >
-    Implemented using the adjacency list representation
-    and a custom vertex data structure
+    < Vertex Abstract Data Type >
+    Implemented to make array processing easier
 */
 struct Vertex {
     int id;
@@ -23,6 +22,33 @@ struct Vertex {
     }
 };
 
+int getVertexId(vector<Vertex> v, string content) {
+    int temp;
+    for(auto& v : v) {
+        if (v.content.compare(content) == 0) {
+            temp = v.id;
+            break;
+        }
+    }
+    return temp;
+}
+
+Vertex findVertexById(vector<Vertex> v, int id) {
+    Vertex temp;
+    for(auto& v : v) {
+        if (v.id == id) {
+            temp = v;
+            break;
+        }
+    }
+    return temp;
+}
+
+/*
+    < Graph Class > 
+    Implemented using the adjacency list representation
+    and vector for the realization
+*/
 class Graph {
     public: 
         Graph(int vertrices); 

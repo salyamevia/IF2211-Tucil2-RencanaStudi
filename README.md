@@ -7,7 +7,7 @@
 
 ## Development Notes
 Program to-do list:
-- [ ] Graph Class
+- [x] Graph Class
 - [ ] Convert input to graph (adjacency list)
 - [ ] DFS Algorithm
 - [ ] Toposort Algorithm
