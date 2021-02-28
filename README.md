@@ -11,5 +11,4 @@ Program to-do list:
 - [x] Convert input to graph (adjacency list)
 - [x] Topological Sort Algorithm
 
-## Acknowledgement
 

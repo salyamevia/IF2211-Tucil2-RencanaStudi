@@ -39,11 +39,12 @@ Graph filesToGraph(string filename) {
             vertrices.push_back(substr);
         }
 
-        // Get Vertex
+        // Get and Add Vertex
         string firstContent = vertrices[0];
         Vertex first = findVertexById(vertexList,
                             getVertexId(vertexList, firstContent)
                         );
+        fileGraph.addVertex(first);
 
         // Add edges
         auto it = vertrices.begin(); ++it;
@@ -54,6 +55,7 @@ Graph filesToGraph(string filename) {
             fileGraph.addEdge(temp, first);
             ++it;
         }
+
     }
 
     file.close();

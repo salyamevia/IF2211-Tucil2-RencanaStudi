@@ -20,8 +20,6 @@ int main(int argc, const char** argv) {
     myGraph.printVertex();  
 
     cout << endl << endl;
-
-    vector<Vertex> graphVertrices = myGraph.getVertex();
     
     vector<vector<Vertex>> result = topologicalSort(myGraph);
     printTopoResult(result); 

@@ -10,18 +10,20 @@ vector<vector<Vertex>> topologicalSort(Graph myGraph) {
         result.push_back(temp);
 
         for (int i = 0; i < temp.size(); i++){
-            cout << "Remove: " << temp[i].content << endl;
+           // cout << "Remove: " << temp[i].content << endl;
             myGraph.removeVertex(temp[i]);
+           /*  myGraph.printGraph();
+            myGraph.printVertex(); */
         }
 
-        cout << "Current Result: " << endl;
+        /* cout << "Current Result: " << endl;
         for(auto& res : result){
             for(auto& v : res) {
                 cout << v.content << " ";
             }
             cout << endl;
         }
-        cout << endl;
+        cout << endl; */
     }
 
     return result;
@@ -31,15 +33,15 @@ vector<Vertex> getZeroInDegree(Graph graph) {
     vector<Vertex> result; 
     vector<Vertex> vertexVector = graph.getVertex();
 
-    graph.printGraph();
+    //graph.printGraph();
 
-    cout << "Indegree" << endl;
+    //cout << "Indegree" << endl;
     for (auto& v : vertexVector) {
         if (graph.countInDegree(v) == 0) {
             result.push_back(v);
         }
 
-        cout << v.content << " indegree " << graph.countInDegree(v) << endl;
+        //cout << v.content << " " << v.id << " indegree " << graph.countInDegree(v) << endl;
     }
 
 

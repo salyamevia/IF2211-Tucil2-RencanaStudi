@@ -70,6 +70,7 @@ class Graph {
 
         void addEdge(Vertex source, Vertex destination);
         void removeEdge(Vertex source, Vertex destination);
+        void addVertex(Vertex vertex);
         void removeVertex(Vertex vertex);
         Vertex findVertex(int id);
         int countInDegree(Vertex vertex);

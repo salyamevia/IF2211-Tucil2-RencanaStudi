@@ -1,0 +1,42 @@
+IF4092 Tugas Akhir 2, IF4091 Tugas Akhir 1 dan Seminar.
+KU206X Agama dan Etika.
+XXLING Mata Kuliah Wajib Lingkungan.
+IF4091 Tugas Akhir 1 dan Seminar.
+IF4090 Kerja Praktek, IF3280 Socio-informatika dan Profesionalisme.
+IF3210 Pengembangan Aplikasi pada Platform Khusus, IF2130 Organisasi dan Arsitektur Komputer, IF2110 Algoritma & Struktur Data.
+IF3270 Pembelajaran Mesin, IF3170 Inteligensi Buatan, IF2110 Algoritma & Struktur Data.
+IF3230 Sistem Paralel dan Terdistribusi, IF3130 Jaringan Komputer.
+IF3250 Proyek Perangkat Lunak, IF3150 Manajemen Proyek Perangkat Lunak, IF2250 Rekayasa Perangkat Lunak.
+IF3260 Grafika Komputer, IF2130 Organisasi dan Arsitektur Komputer, IF2110 Algoritma & Struktur Data, IF2123 Aljabar Linier dan Geometri.
+IF3280 Socio-informatika dan Profesionalisme.
+IF3170 Inteligensi Buatan, IF2121 Logika Komputasional, IF2124 Teori Bahasa Formal dan Otomata, IF2220 Probabilitas dan Statistika, IF2211 Strategi Algoritma.
+IF3110 Pengembangan Aplikasi Berbasis Web, IF2210 Pemrograman Berorientasi Objek, IF2110 Algoritma & Struktur Data.
+IF3130 Jaringan Komputer, IF2230 Sistem Operasi.
+IF3141 Sistem Informasi, IF2240 Basis Data, IF2250 Rekayasa Perangkat Lunak.
+IF3150 Manajemen Proyek Perangkat Lunak, IF2250 Rekayasa Perangkat Lunak.
+IF3140 Manajemen Basis Data.
+IF3151 Interaksi Manusia Komputer, IF2250 Rekayasa Perangkat Lunak.
+IF2210 Pemrograman Berorientasi Objek, IF2110 Algoritma & Struktur Data.
+IF2211 Strategi Algoritma.
+IF2220 Probabilitas dan Statistika, MA1101 Matematika IA, MA1201 Matematika IIA, IF2120 Matematika Diskrit.
+IF2230 Sistem Operasi.
+IF2240 Basis Data.
+IF2250 Rekayasa Perangkat Lunak.
+IF2121 Logika Komputasional.
+IF2110 Algoritma & Struktur Data.
+IF2120 Matematika Diskrit.
+IF2124 Teori Bahasa Formal dan Otomata, IF2120 Matematika Diskrit, IF2110 Algoritma & Struktur Data.
+IF2123 Aljabar Linier dan Geometri, MA1101 Matematika IA.
+IF2130 Organisasi dan Arsitektur Komputer.
+MA1201 Matematika IIA.
+FI1201 Fisika Dasar IIA.
+IF1210 Dasar Pemrograman.
+KU1202 Pengantar Rekayasa dan Desain.
+KI1002 Kimia Dasar B.
+EL1200 Pengantar Analisis Rangkaian, MA1101 Matematika IA, MA1201 Matematika IIA, FI1201 Fisika Dasar IIA.
+MA1101 Matematika IA.
+FI1101 Fisika Dasar IA.
+KU1001 Olah Raga.
+KU1102 Pengenalan Komputasi.
+KU1011 Tata Tulis Karya Ilmiah.
+KU1024 Bahasa Inggris.
