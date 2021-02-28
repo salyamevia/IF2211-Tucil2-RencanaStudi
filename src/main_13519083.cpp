@@ -1,5 +1,6 @@
 #include<iostream>
 #include<limits> // try catch
+#include <conio.h> // getch
 
 #include "Graph_13519083.cpp" // Graph Class
 #include "filesProcessing_13519083.cpp" // filesToGraph
@@ -31,20 +32,18 @@ int main() {
     }
 
     cout << "Terima kasih sudah menggunakan Rencanain! Semoga lulus kuliahnya :)" << endl;
+    cout << "Silahkan tekan key apapun untuk keluar." << endl;
+    getch();
 
     return 0;
 }
 
 void run() {
-    cout << "Apabila file berada di dalam folder maka bisa menggunakan relative path, misalnya './test/test8.txt'" << endl;
+    cout << "Apabila file berada di dalam folder maka bisa menggunakan relative path, misalnya '../test/test8.txt'" << endl;
     cout << "Masukkan nama file : ";
     string filename; cin >> filename;
 
     Graph myGraph = filesToGraph(filename);
-    /* myGraph.printGraph();
-    myGraph.printVertex();  */
-
-    cout << endl << endl; 
     
     vector<vector<Vertex>> result = topologicalSort(myGraph);
 

@@ -52,28 +52,16 @@ vector<Vertex> Graph::getVertex() {
 // Methods
 void Graph::addEdge(Vertex source, Vertex destination) {
     this->graph[source.id].push_back(destination);
-
-    /* // Add vertex to vertex vector if not exists
-    if (find(this->vertex.begin(), this->vertex.end(), destination) == this->vertex.end()) {
-        this->vertex.push_back(destination);
-    }
-    if (find(this->vertex.begin(), this->vertex.end(), source) == this->vertex.end()) {
-        this->vertex.push_back(source);
-    } */
 }
 
 void Graph::removeEdge(Vertex source, Vertex destination) {
     for (int i = 0; i < this->graph[getVertexId(this->vertex, source.content)].size(); i++) {
-        //cout << "From " << this->graph[getVertexId(this->vertex, source.content)][i].content << " " << this->graph[getVertexId(this->vertex, source.content)][i].id;
         if(isContentSame(this->graph[getVertexId(this->vertex, source.content)][i], destination)) {
-            //cout << " remove " << destination.content << endl; //
             this->graph[getVertexId(this->vertex, source.content)].erase(
                 this->graph[getVertexId(this->vertex, source.content)].begin() + i
             );
             break;
-        } /* else {
-            cout << endl;
-        } */
+        } 
     }
 }
 
@@ -94,22 +82,14 @@ void Graph::removeVertex(Vertex vertex) {
         }
     }
 
-    /* this->printGraph();
-    this->printVertex(); */
-
     // Update Vertex Id and Graph
-    //cout << "update verted id and graph" << endl;
     for (int i = getVertexId(this->vertex, vertex.content); i < this->nVertices; i++) {
-        /* cout << "vertex " << getVertexId(this->vertex, vertex.content) << " " << vertex.content << endl;
-        cout << "change: " << this->vertex[i].content << " " << this->vertex[i].id << endl;   */  
         if (this->vertex[i].id > getVertexId(this->vertex, vertex.content)){
             this->vertex[i].id--;
-            //cout << "to: " << this->vertex[i].content << " " << this->vertex[i].id << endl;    
         }
         if (i+1 != this->nVertices) {
             this->graph[i] = this->graph[i+1];
         }
-        //cout << this->vertex[i].content << " " << this->vertex[i].id << endl;
     };
 
     // Update edges
@@ -124,7 +104,6 @@ void Graph::removeVertex(Vertex vertex) {
     }
 
     // Remove from Vertex List
-    //cout << " remove from Vertex List" << endl;
     int index;
     for (int i = 0; i < this->nVertices; i++) {
         if (isContentSame(this->vertex[i], vertex)){
@@ -134,9 +113,6 @@ void Graph::removeVertex(Vertex vertex) {
     this->vertex.erase(this->vertex.begin() + index);
     this->nVertices--;
 
-    /* for (int i = 0; i < this->nVertices; i++){
-        cout << this->vertex[i].content << " " << this->vertex[i].id << endl;
-    } */
 }
 
 Vertex Graph::findVertex(int id) {
@@ -152,10 +128,8 @@ Vertex Graph::findVertex(int id) {
 
 int Graph::countInDegree(Vertex vertex) {
     int inDegree = 0;
-    //cout << "vertex to check: " << vertex.content << endl;
     for (int i = 0; i < this->nVertices; i++) {
         for(auto v : this->graph[i]) {
-            //cout << "sama ga?" << v.content << endl;
             if (isContentSame(v, vertex)) {
                 inDegree++;
             }

@@ -65,8 +65,8 @@ void printTopoResult(vector<vector<Vertex>> topoResult) {
     Convert numeric form to roman numerals
 */
 string convertIntToRoman(int value) {
-    vector<string> romans = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
-    vector<int> integer = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+    vector<string> romans = {"X", "IX", "V", "IV", "I"};
+    vector<int> integer = {10, 9, 5, 4, 1};
 
     string result = "";
     for (auto i = 0; i < integer.size(); i++) {
