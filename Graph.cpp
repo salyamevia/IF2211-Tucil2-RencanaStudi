@@ -12,6 +12,21 @@ Graph::Graph(int vertrices) {
     this->graph = new vector<Vertex>[vertrices];
 }
 
+// Copy Constructor
+Graph::Graph(const Graph& other) {
+    this->nVertices = other.nVertices;
+    this->graph = new vector<Vertex>[this->nVertices];
+    for(int i = 0; i < this->nVertices; i++) {
+        for(auto& v : other.graph[i]) {
+            this->graph[i].push_back(v);
+        }
+    }
+
+    for(auto& v : other.vertex) {
+        this->vertex.push_back(v);
+    }
+}
+
 // Destructor
 Graph::~Graph() {
     delete[] graph;
@@ -26,8 +41,8 @@ void Graph::setVertices(int vertices) {
     this->nVertices = vertices;
 }
 
-vector<Vertex> Graph::getGraph() {
-    return *this->graph;
+vector<Vertex>* Graph::getGraph() {
+    return this->graph;
 }
 
 vector<Vertex> Graph::getVertex() {
@@ -50,6 +65,7 @@ void Graph::addEdge(Vertex source, Vertex destination) {
 void Graph::removeEdge(Vertex source, Vertex destination) {
     for (int i = 0; i < this->graph[source.id].size(); i++) {
         if(this->graph[source.id][i] == destination) {
+            cout << "sorc " << this->graph[source.id][i].content << " w/ id " << this->graph[source.id][i].id << endl;
             this->graph[source.id].erase(
                 this->graph[source.id].begin() + i
             );
@@ -61,7 +77,8 @@ void Graph::removeEdge(Vertex source, Vertex destination) {
 void Graph::removeVertex(Vertex vertex) {
     // Remove All Edges 
     for (int i = 0; i < this->nVertices; i++) {
-        for(auto& v : this->graph[i]) {
+        for(int j = 0; j < this->graph[i].size(); j++) {
+            Vertex v = this->graph[i][j];
             if (v == vertex){
                 this->removeEdge(this->findVertex(i), vertex);
             } else {
@@ -111,6 +128,7 @@ int Graph::countInDegree(Vertex vertex) {
             }
         }
     }
+
     return inDegree;
 }
 

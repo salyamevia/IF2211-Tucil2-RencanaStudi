@@ -52,11 +52,12 @@ Vertex findVertexById(vector<Vertex> v, int id) {
 class Graph {
     public: 
         Graph(int vertrices); 
+        Graph(const Graph& other);
         ~Graph();
 
         int getVertices();
         void setVertices(int vertices);
-        vector<Vertex> getGraph();
+        vector<Vertex>* getGraph();
         vector<Vertex> getVertex();
 
         void addEdge(Vertex source, Vertex destination);

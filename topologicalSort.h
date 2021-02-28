@@ -3,6 +3,8 @@
 
 #include "Graph.h"
 
-void topologicalSort(Graph graph);
+vector<vector<Vertex>> topologicalSort(Graph graph);
+vector<Vertex> getZeroInDegree(Graph graph);
+void printTopoResult(vector<vector<Vertex>> topoResult);
 
 #endif // !TOPOLOGICALSORT_H
