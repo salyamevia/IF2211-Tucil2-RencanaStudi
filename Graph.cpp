@@ -121,9 +121,11 @@ Vertex Graph::findVertex(int id) {
 
 int Graph::countInDegree(Vertex vertex) {
     int inDegree = 0;
+  //  cout << "vertex to check: " << vertex.content << endl;
     for (int i = 0; i < this->nVertices; i++) {
         for(auto v : this->graph[i]) {
-            if (v == vertex) {
+//            cout << "sama ga?" << v.content << endl;
+            if (isContentSame(v, vertex)) {
                 inDegree++;
             }
         }

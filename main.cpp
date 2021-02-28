@@ -22,20 +22,9 @@ int main(int argc, const char** argv) {
     cout << endl << endl;
 
     vector<Vertex> graphVertrices = myGraph.getVertex();
-    /*
-    cout << "Remove " << graphVertrices[1].content << endl;
-    myGraph.removeVertex(graphVertrices[1]);
-
-    myGraph.printGraph();
-    myGraph.printVertex();   */
     
     vector<vector<Vertex>> result = topologicalSort(myGraph);
     printTopoResult(result); 
-
-    cout << "graph method" << endl;
-    for(auto& v : graphVertrices){
-        cout << v.content << " indegree: " << myGraph.countInDegree(v) << endl; 
-    }
 
     return 0;
 }

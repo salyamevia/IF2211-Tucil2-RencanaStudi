@@ -44,6 +44,14 @@ Vertex findVertexById(vector<Vertex> v, int id) {
     return temp;
 }
 
+bool isContentSame(Vertex v1, Vertex v2) {
+    if (v1.content.compare(v2.content) == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 /*
     < Graph Class > 
     Implemented using the adjacency list representation

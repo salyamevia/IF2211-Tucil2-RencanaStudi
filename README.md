@@ -9,7 +9,7 @@
 Program to-do list:
 - [x] Graph Class
 - [x] Convert input to graph (adjacency list)
-- [ ] Topological Sort Algorithm
+- [x] Topological Sort Algorithm
 
 ## Acknowledgement
 
