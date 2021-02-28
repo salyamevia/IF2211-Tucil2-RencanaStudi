@@ -1,8 +1,16 @@
 #include<iostream>
+#include<string> // string
+#include<iterator> // size
+#include<vector> // vector
 
-#include "topologicalSort.h"
+#include "topologicalSort_13519083.h"
 using namespace std;
 
+/*
+    < Topological Sort >
+    Will decreas graph size for every vertrices with zero in degree
+    The resulted vector is classified as semesters
+*/
 vector<vector<Vertex>> topologicalSort(Graph myGraph) {
     vector<vector<Vertex>> result;
     while (myGraph.getVertices() > 0) {
@@ -10,47 +18,38 @@ vector<vector<Vertex>> topologicalSort(Graph myGraph) {
         result.push_back(temp);
 
         for (int i = 0; i < temp.size(); i++){
-           // cout << "Remove: " << temp[i].content << endl;
             myGraph.removeVertex(temp[i]);
-           /*  myGraph.printGraph();
-            myGraph.printVertex(); */
         }
 
-        /* cout << "Current Result: " << endl;
-        for(auto& res : result){
-            for(auto& v : res) {
-                cout << v.content << " ";
-            }
-            cout << endl;
-        }
-        cout << endl; */
     }
 
     return result;
 }
 
+/*
+    < Get Zero In Degree >
+    Get all vetrices with zero in degree
+*/
 vector<Vertex> getZeroInDegree(Graph graph) {
     vector<Vertex> result; 
     vector<Vertex> vertexVector = graph.getVertex();
 
-    //graph.printGraph();
-
-    //cout << "Indegree" << endl;
     for (auto& v : vertexVector) {
         if (graph.countInDegree(v) == 0) {
             result.push_back(v);
         }
-
-        //cout << v.content << " " << v.id << " indegree " << graph.countInDegree(v) << endl;
     }
-
 
     return result;
 }
 
+/*
+    < Print Topological Search Result >
+    Print result with the semester format
+*/
 void printTopoResult(vector<vector<Vertex>> topoResult) {
     for (int semester = 0; semester < topoResult.size(); ++semester) {
-        cout << "Semester " << semester+1 << " : ";
+        cout << "Semester " << convertIntToRoman(semester+1) << " : ";
         for (int course = 0; course < topoResult[semester].size(); ++course) {
             if (course != topoResult[semester].size()-1) {
                 cout << topoResult[semester][course].content << ", ";
@@ -59,4 +58,22 @@ void printTopoResult(vector<vector<Vertex>> topoResult) {
             }
         }
     }
+}
+
+/*
+    < Convert Integer to Roman >
+    Convert numeric form to roman numerals
+*/
+string convertIntToRoman(int value) {
+    vector<string> romans = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+    vector<int> integer = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+
+    string result = "";
+    for (auto i = 0; i < integer.size(); i++) {
+        while (value - integer[i] >= 0) {
+            result+= romans[i];
+            value-= integer[i];
+        }
+    }
+    return result;
 }

@@ -4,8 +4,8 @@
 #include <vector> // vector
 #include<algorithm> // erase, remove_if
 
-#include "Graph.h"
-#include "filesProcessing.h"
+#include "Graph_13519083.h"
+#include "filesProcessing_13519083.h"
 using namespace std;
 
 /* 

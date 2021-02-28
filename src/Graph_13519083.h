@@ -1,5 +1,5 @@
-#ifndef GRAPH_H
-#define GRAPH_H
+#ifndef GRAPH_13519083_H
+#define GRAPH_13519083_H
 
 #include<vector> // Vector 
 #include<string> // String
@@ -82,4 +82,4 @@ class Graph {
         vector<Vertex> vertex;
 };
 
-#endif // !GRAPH_H
+#endif // !GRAPH_13519083_H

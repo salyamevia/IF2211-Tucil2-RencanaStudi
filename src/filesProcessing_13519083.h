@@ -1,8 +1,8 @@
-#ifndef FILESPROCESSING_H
-#define FILESPROCESSING_H
+#ifndef FILESPROCESSING_13519083_H
+#define FILESPROCESSING_13519083_H
 
 #include <iostream>
-#include "Graph.h"
+#include "Graph_13519083.h"
 using namespace std;
 
 Graph filesToGraph(string filename);
@@ -13,4 +13,4 @@ bool isCommaSpaceDot(char c);
 string removeSpace(string str);
 
 
-#endif // !FILESPROCESSING_H
+#endif // !FILESPROCESSING_13519083_H

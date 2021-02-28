@@ -1,9 +1,9 @@
 #include<iostream>
 #include<limits> // try catch
 
-#include "Graph.cpp" // Graph Class
-#include "filesProcessing.cpp" // filesToGraph
-#include "topologicalSort.cpp" // topologicalSort, printTopoResult
+#include "Graph_13519083.cpp" // Graph Class
+#include "filesProcessing_13519083.cpp" // filesToGraph
+#include "topologicalSort_13519083.cpp" // topologicalSort, printTopoResult
 using namespace std;
 
 void run();
